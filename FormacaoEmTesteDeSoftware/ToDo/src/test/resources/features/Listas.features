@@ -1,0 +1,42 @@
+#language: pt
+#encoding: utf-8
+  Funcionalidade: Listas
+    Criar e manter listas
+
+  Cenario: Criar uma lista
+    Dado que acesso o site Microsoft ToDo
+    Quando clico no icone do usuario
+    Entao o site realiza login
+    E exibiu a pagina do ToDo
+    Quando clico em Nova lista
+    E preencho "Lista de compras"
+    E pressiono Enter
+    Entao exibe a Lista de compras vazia
+
+  Cenario: Alterar lista
+    Dado que estou na Lista de compras
+    Quando clico no icone ... ao lado do nome da lista
+    E clico em Renomear lista
+    E renomeio a lista e pressiono Enter
+    Entao o nome da lista é alterado
+
+  Cenario: Consultar lista
+    Dado que estou em Microsoft ToDo
+    E logado
+    Quando clico na Lista de compras
+    Entao visualizo a lista vazia
+
+  Cenario: Compartilhar lista
+    Dado que estou na Lista de compras
+    Quando clico em Compartilhar
+    E clico em Criar link do convite
+    E clico em Copiar link
+    Entao o link é copiado para ser compartilhado com outros usuarios
+
+  Cenario: Excluir lista
+    Dado que estou na Lista de compras
+    Quando clico no icone ... ao lado do nome da lista
+    E clico em Excluir lista
+    Entao visualizo a mensagem de confirmacao
+    Quando clico em Excluir lista
+    Entao a Lista de compras é deletada

@@ -36,11 +36,11 @@ public class ListasPuro {
 
         driver.findElement(By.id("mectrl_headerPicture")).click();
         Thread.sleep(3000);
-        driver.findElement(By.id("i0116")).sendKeys(Keys.chord("giancarlo.gomes@hotmail.com"));
+        driver.findElement(By.id("i0116")).sendKeys(Keys.chord("TROCAR EMAIL"));
         Thread.sleep(3000);
         driver.findElement(By.id("idSIButton9")).click();
         Thread.sleep(3000);
-        driver.findElement(By.id("i0118")).sendKeys(Keys.chord("V!nte0913"));
+        driver.findElement(By.id("i0118")).sendKeys(Keys.chord("TROCAR SENHA"));
         Thread.sleep(3000);
         driver.findElement(By.id("idSIButton9")).click();
         Thread.sleep(3000);

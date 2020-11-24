@@ -24,6 +24,7 @@ public class Login {
         File foto = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(foto, new File(pastaEvidencias + nomeEvidencia + ".png"));
     }
+
     @Before
     public void iniciar(){
         System.setProperty("webdriver.chrome.driver", "drivers/chrome/87/chromedriver.exe");

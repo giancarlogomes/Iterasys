@@ -3,11 +3,17 @@ package site;
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -25,7 +31,7 @@ import static org.junit.runners.Parameterized.*;
 public class Curso {
 
     WebDriver driver;
-    String url;
+    static String url;
     String pastaPrint = "evidencias/" + new SimpleDateFormat("yyyy-MM-dd HH-mm").format(Calendar.getInstance().getTime()) + "/";
 
     //apoio
@@ -61,7 +67,6 @@ public class Curso {
 
     @Parameters
     public static Collection<String[]> LerArquivo() throws IOException {
-
         return LerCsv("db/FTS128 Massa Iterasys.csv");
     }
 
@@ -81,12 +86,32 @@ public class Curso {
         return dados;
     }
 
+    @BeforeClass
+    public static void antesDeTudo(){
+        url = "https://iterasys.com.br/";
+        System.setProperty("webdriver.chrome.driver", "drivers/chrome/87/chromedriver.exe");
+        System.setProperty("webdriver.edge.driver", "drivers/edge/87.0.664.47/msedgedriver.exe");
+        System.setProperty("webdriver.gecko.driver", "drivers/firefox/0.28.0/geckodriver.exe");
+        System.setProperty("webdriver.ie.driver", "drivers/ie/3.15.1/IEDriverServer.exe");
+    }
+
     @Before
     public void iniciar(){
-        System.setProperty("webdriver.chrome.driver", "drivers/chrome/87/chromedriver.exe");
-        url = "https://iterasys.com.br/";
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+        switch (browser){
+            case "chrome":
+                driver = new ChromeDriver();
+                break;
+            case "ie":
+                driver = new InternetExplorerDriver();
+                break;
+            case "firefox":
+                driver = new FirefoxDriver();
+                break;
+            case "edge":
+                driver = new EdgeDriver();
+                break;
+        }
+        driver.manage().timeouts().implicitlyWait(30000, TimeUnit.MILLISECONDS);
         driver.manage().window().maximize();
     }
 
@@ -101,16 +126,10 @@ public class Curso {
 
         tirarPrint("Passo 1 - Acessou pagina inicial");
 
-//        String nomeCursoEsperado = "TestLink";
-//        String precoCursoEsperado = "R$ 79,99";
-//        String precoSubTotalEsperado = "SUBTOTAL R$ 79,99";
-//        String valorDasParcelasEsperado = "ou em 12 x de R$ 8,03";
-
         //pesquisar curso
         driver.findElement(By.id("searchtext")).sendKeys(Keys.chord(curso + Keys.ENTER));
-        Thread.sleep(1000);
-        tirarPrint("Passo 2 - Exibe os cursos relacionados a TestLink");
-        //driver.findElement(By.cssSelector("#all_courses_search a:nth-child(2)")).click();
+        tirarPrint("Passo 2 - Exibe os cursos relacionados a " + curso);
+        Thread.sleep(10000);
         driver.findElement(By.cssSelector("span.comprar")).click();
         Thread.sleep(3000);
         tirarPrint("Passo 3 - Exibe o titulo, valor e parcelamento do curso");
@@ -129,80 +148,4 @@ public class Curso {
         //assertEquals(valorDasParcelasEsperado, driver.findElement(By.cssSelector("div.ou-parcele")).getText());
         assertTrue(driver.findElement(By.cssSelector("div.ou-parcele")).getText().contains(parcelamento));
     }
-
-//    @Test
-//    public void consultarCursoMantis() throws InterruptedException, IOException {
-//        driver.get(url);
-//
-//        tirarPrint("Passo 1 - Acessou pagina inicial");
-//
-//        String nomeCursoEsperado = "Mantis";
-//        String precoCursoEsperado = "R$ 22,90";
-//        String precoSubTotalEsperado = "SUBTOTAL R$ 22,90";
-//        String valorDasParcelasEsperado = "ou em 3 x de R$ 7,63 * no cartão";
-//
-//        //pesquisar curso
-//        driver.findElement(By.id("searchtext")).sendKeys(Keys.chord(nomeCursoEsperado + Keys.ENTER));
-//        Thread.sleep(1000);
-//
-//        tirarPrint("Passo 2 - Exibe os cursos relacionados a Mantis");
-//
-//        //driver.findElement(By.cssSelector("#all_courses_search a:nth-child(2)")).click();
-//        driver.findElement(By.cssSelector("span.comprar")).click();
-//        Thread.sleep(3000);
-//
-//        tirarPrint("Passo 3 - Exibe o titulo, valor e parcelamento do curso");
-//
-//        //validar nome do curso
-//        String nomeCursoObtido = driver.findElement(By.cssSelector("span.item-title")).getText();
-//        assertEquals(nomeCursoEsperado, nomeCursoObtido);
-//
-//        //validar preço a esquerda
-//        assertEquals(precoCursoEsperado,driver.findElement(By.cssSelector("span.new-price")).getText());
-//
-//        //validar preco a direita
-//        assertEquals(precoSubTotalEsperado, driver.findElement(By.cssSelector("div.subtotal")).getText());
-//
-//        //validar valor das parcelas
-//        //assertEquals(valorDasParcelasEsperado, driver.findElement(By.cssSelector("div.ou-parcele")).getText());
-//        assertTrue(driver.findElement(By.cssSelector("div.ou-parcele")).getText().contains(valorDasParcelasEsperado));
-//    }
-//
-//    @Test
-//    public void consultarCursoFormacaoTesteSoftware() throws InterruptedException, IOException {
-//        driver.get(url);
-//
-//        tirarPrint("Passo 1 - Acessou pagina inicial");
-//
-//        String nomeCursoEsperado = "Formação em Teste de Software (Videoconferência)";
-//        String precoCursoEsperado = "R$ 1.990,00";
-//        String precoSubTotalEsperado = "SUBTOTAL R$ 1.990,00";
-//        String valorDasParcelasEsperado = "ou em 12 x de R$ 165,83 * no cartão";
-//
-//        //pesquisar curso
-//        driver.findElement(By.id("searchtext")).sendKeys(Keys.chord(nomeCursoEsperado + Keys.ENTER));
-//        Thread.sleep(1000);
-//
-//        tirarPrint("Passo 2 - Exibe os cursos relacionados a Formacao em Teste de Software");
-//
-//        //driver.findElement(By.cssSelector("#all_courses_search a:nth-child(2)")).click();
-//        driver.findElement(By.cssSelector("span.comprar")).click();
-//        Thread.sleep(3000);
-//
-//        tirarPrint("Passo 3 - Exibe o titulo, valor e parcelamento do curso");
-//
-//        //validar nome do curso
-//        String nomeCursoObtido = driver.findElement(By.cssSelector("span.item-title")).getText();
-//        assertEquals(nomeCursoEsperado, nomeCursoObtido);
-//
-//        //validar preço a esquerda
-//        assertEquals(precoCursoEsperado,driver.findElement(By.cssSelector("span.new-price")).getText());
-//
-//        //validar preco a direita
-//        assertEquals(precoSubTotalEsperado, driver.findElement(By.cssSelector("div.subtotal")).getText());
-//
-//        //validar valor das parcelas
-//        //assertEquals(valorDasParcelasEsperado, driver.findElement(By.cssSelector("div.ou-parcele")).getText());
-//        assertTrue(driver.findElement(By.cssSelector("div.ou-parcele")).getText().contains(valorDasParcelasEsperado));
-//    }
 }

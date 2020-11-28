@@ -23,8 +23,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6eff7370-106f-48b9-b69b-bfe59c87e2c3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../SiteIterasys/src/test/java/site/Americanas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/classes/java/test/site/Curso.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/build/classes/java/test/site/Curso.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/classes/java/test/site/Login.class" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/build/classes/java/test/site/Login.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/reports/tests/test/classes/site.Curso.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/reports/tests/test/packages/site.html" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/build/reports/tests/test/packages/site.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/test-results/test/TEST-site.Curso.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/db/FTS128 Massa Iterasys.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/db/FTS128 Massa Iterasys.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/src/test/java/site/Curso.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/src/test/java/site/Curso.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SiteIterasys/src/test/java/site/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SiteIterasys/src/test/java/site/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/todo/ListasPuro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/todo/ListasPuro.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

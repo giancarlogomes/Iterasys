@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="site.Google" tests="3" skipped="0" failures="0" errors="0" timestamp="2020-11-29T20:10:05" hostname="LAPTOP-PV6O1VMP" time="91.143">
+  <properties/>
+  <testcase name="pesquisaGoogle[0]" classname="site.Google" time="31.183"/>
+  <testcase name="pesquisaGoogle[1]" classname="site.Google" time="28.964"/>
+  <testcase name="pesquisaGoogle[2]" classname="site.Google" time="30.936"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 87.0.4280.20 (c99e81631faa0b2a448e658c0dbd8311fb04ddbd-refs/branch-heads/4280@{#355}) on port 21339
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+nov 29, 2020 5:10:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+1606680637291	geckodriver	INFO	Listening on 127.0.0.1:31902
+1606680637727	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\gianc\\AppData\\Local\\Temp\\rust_mozprofileQCXVdy"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1606680640973	Marionette	INFO	Listening on port 63719
+1606680641415	Marionette	WARN	TLS certificate errors will be ignored for this session
+nov 29, 2020 5:10:41 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+[Child 8132, MediaDecoderStateMachine #1] WARNING: Decoder=12f6ba65c00 Decode error: NS_ERROR_DOM_MEDIA_FATAL_ERR (0x806e0005) - RefPtr<MediaSourceTrackDemuxer::SamplesPromise> __cdecl mozilla::MediaSourceTrackDemuxer::DoGetSamples(int32_t): manager is detached.: file /builds/worker/checkouts/gecko/dom/media/MediaDecoderStateMachine.cpp:3471
+1606680663889	Marionette	INFO	Stopped listening on port 63719
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][MessageChannel::SendAndWait] Error: Channel error: cannot send/recv
+
+Starting MSEdgeDriver 87.0.664.47 (ba159091e772c52e16e8d82850f3c8b934507b5d) on port 29479
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping MSEdgeDriver safe.
+MSEdgeDriver was started successfully.
+nov 29, 2020 5:11:10 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFORMAÇÕES: Detected dialect: W3C
+]]></system-err>
+</testsuite>
